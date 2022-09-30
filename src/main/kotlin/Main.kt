@@ -25,8 +25,27 @@ fun declarationTypesOfVariables(){
     println("name remplaced: " + myReplace)
 }
 
+fun contenationStrings() {
+    val age: Int = 20
+    val altura: Double = 1.90
+    val peso: Float = 80.541214f
+    val name: String = "Jose Alberto"
+    val description: String = "Hola soy $name, tengo $age años y mi altura es de $altura con un peso de $peso"
+
+    // Mostrar por consola básica:
+    println(description)
+
+    // Comodines por tipo
+    // - String = %s
+    // - Enteros = %d
+    // - Double = %f
+    // - Float = %f
+    val description2: String = String.format("Hola soy %s, tengo %d años y mi altura es de %.2f con un peso de %f", name, age, altura, peso)
+    println("Description 2:" + description2)
+}
 fun main(args: Array<String>) {
     println("Hello World!")
 
     declarationTypesOfVariables()
+    contenationStrings()
 }
