@@ -55,6 +55,38 @@ fun var_and_val (){
 fun operacionesNumeros (){
     println("Pi" + kotlin.math.PI)
 }
+
+fun usandoWhen () {
+    val dayOfWeek = 4
+
+    if (dayOfWeek == 1) {
+        println("Dia de la semana 1")
+    } else if (dayOfWeek == 2) {
+        println("Dia de la semana 2")
+    }else if (dayOfWeek == 3) {
+        println("Dia de la semana 3")
+    }else if (dayOfWeek == 4) {
+        println("Dia de la semana 4")
+    }else if (dayOfWeek == 5) {
+        println("Dia de la semana 5")
+    }else if (dayOfWeek == 6) {
+        println("Dia de la semana 6")
+    }
+
+
+    when (dayOfWeek) {
+        1 -> println("Dia de la semana 1")
+        2 -> println("Dia de la semana 2")
+        3 -> println("Dia de la semana 3")
+        4 -> println("Dia de la semana 4")
+        5 -> {
+            // si no quiero hacer mas cosas en este case podemos quitar los { }
+            println("Dia de la semana 5")
+        }
+        6 -> println("Dia de la semana 6")
+        else -> println("otro dia..")
+    }
+}
 fun main(args: Array<String>) {
     println("Hello World!")
 
@@ -62,4 +94,5 @@ fun main(args: Array<String>) {
     contenationStrings()
     var_and_val()
     operacionesNumeros()
+    usandoWhen()
 }
