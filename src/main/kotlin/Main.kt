@@ -43,9 +43,23 @@ fun contenationStrings() {
     val description2: String = String.format("Hola soy %s, tengo %d años y mi altura es de %.2f con un peso de %f", name, age, altura, peso)
     println("Description 2:" + description2)
 }
+
+fun var_and_val (){
+    var name = "jotxee"
+    name = "Miriam"
+    // al se declarada como var es reasignalbe
+
+    println("Nombre:  $name es igual 'jotxee'? ${name.equals("jotxee")}")
+}
+
+fun operacionesNumeros (){
+    println("Pi" + kotlin.math.PI)
+}
 fun main(args: Array<String>) {
     println("Hello World!")
 
     declarationTypesOfVariables()
     contenationStrings()
+    var_and_val()
+    operacionesNumeros()
 }
