@@ -56,6 +56,41 @@ fun operacionesNumeros (){
     println("Pi" + kotlin.math.PI)
 }
 
+fun bucles() {
+    val duration = 5
+    for (i in 0..duration){
+        println(String.format("Hola %d", i))
+    }
+
+    var minutes = 0
+
+    while (minutes<= duration) {
+        println("Reproduciones minuto $minutes")
+        minutes++
+    }
+
+    minutes = 0
+    do {
+        println("Ejecutando en el minuto $minutes")
+        minutes++
+    }while (minutes<=duration)
+}
+
+fun arrays(){
+    val intArray = intArrayOf(1,5,3,66)
+    val booleanArray = booleanArrayOf(true, true, true, false)
+
+    println(booleanArray[booleanArray.size-1])
+
+    val doubleArray = DoubleArray(3)
+    println(doubleArray[0]) // 0.0 0.0 0.0
+
+    val doubleArrayInitialized = DoubleArray(3) {3.4}
+    println(doubleArrayInitialized[0]) // 3.4, 3.4...
+
+    val playList = arrayOf("hola", "hola2")
+    playList.map { msg -> println("msg: $msg") }
+}
 fun usandoWhen () {
     val dayOfWeek = 4
 
@@ -87,6 +122,8 @@ fun usandoWhen () {
         else -> println("otro dia..")
     }
 }
+
+
 fun main(args: Array<String>) {
     println("Hello World!")
 
@@ -95,4 +132,7 @@ fun main(args: Array<String>) {
     var_and_val()
     operacionesNumeros()
     usandoWhen()
+    bucles()
+    arrays()
+    ReadIO.readStringWithPrompt(arrayOf("Jose","Info") )
 }
